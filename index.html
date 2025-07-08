@@ -149,6 +149,18 @@
     background-color: #6c5ce7;
     border-color: #6c5ce7;
     }
+    .form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(108, 92, 231, 0.25);
+  border-color: #6c5ce7;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
 /* Cards & Media */
     body.dark-mode .card,
     body.dark-mode .card-body,
@@ -219,6 +231,44 @@
     }
 
 /*Tables & Pagination*/
+    body.dark-mode .table,
+    body.dark-mode .table-bordered,
+    body.dark-mode .table-hover,
+    body.dark-mode .table-striped {
+    color: #ddd;
+    background-color: #2b2d3c;
+    }
+
+    body.dark-mode .table thead,
+    body.dark-mode .card-header {
+    background-color: #1f2231;
+    color: #f0f0f0;
+    }
+
+    body.dark-mode .table-dark {
+    background-color: #1a1d29;
+    color: #fff;
+    }
+
+    body.dark-mode .pagination .page-link {
+    background-color: #2e2f3e;
+    color: #fff;
+    border-color: #444;
+    }
+/*Footer*/
+    body.dark-mode footer {
+    background-color: #1e212c;
+    color: #e0e0e0;
+    }
+
+    body.dark-mode footer a {
+    color: #ccc;
+    }
+
+    body.dark-mode footer a:hover {
+    color: #fff;
+    }
+
 
   </style>
 </head>
@@ -591,166 +641,176 @@
 
 
   <section id="forms" data-aos="fade-up">
-        <div class="container">
-            <h2 class="section-title text-center">Forms</h2>
-            <p class="text-center text-muted mb-5">
-            Bootstrap offers beautiful, accessible, and responsive form controls with validation and layout flexibility.
-            </p>
+  <div class="container">
+    <h2 class="section-title text-center">Forms</h2>
+    <p class="text-center text-muted mb-5">
+      Professionally styled, accessible, responsive forms using modern Bootstrap 5 utilities.
+    </p>
 
-            <!-- Floating Labels -->
-            <div class="card shadow-sm rounded mb-5">
-            <div class="card-body">
-                <h5 class="fw-semibold mb-4">Floating Labels</h5>
-                <form>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingName" placeholder="John Doe">
-                    <label for="floatingName">Full Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
-                    <label for="floatingEmail">Email address</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                </form>
-            </div>
-            </div>
+    <!-- 🎯 Floating Labels -->
+    <div class="card mb-5 shadow border-0 rounded-4">
+      <div class="card-header bg-primary text-white rounded-top">
+        <i class="bi bi-person-lines-fill me-2"></i>Floating Labels
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control form-control-lg" id="floatingName" placeholder="John Doe">
+            <label for="floatingName">Full Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control form-control-lg" id="floatingEmail" placeholder="you@example.com">
+            <label for="floatingEmail">Email address</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input type="password" class="form-control form-control-lg" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button class="btn btn-primary w-100 btn-lg shadow-sm">Register</button>
+        </form>
+      </div>
+    </div>
 
-            <!-- Basic Form Elements -->
-            <div class="card shadow-sm rounded mb-5">
-            <div class="card-body">
-                <h5 class="fw-semibold mb-4">Basic Inputs</h5>
-                <form>
-                <div class="mb-3">
-                    <label for="formText" class="form-label">Text Input</label>
-                    <input type="text" class="form-control" id="formText" placeholder="Enter text">
-                </div>
-                <div class="mb-3">
-                    <label for="formNumber" class="form-label">Number Input</label>
-                    <input type="number" class="form-control" id="formNumber" min="1" max="100">
-                </div>
-                <div class="mb-3">
-                    <label for="formTextarea" class="form-label">Textarea</label>
-                    <textarea class="form-control" id="formTextarea" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="formFile" class="form-label">File Input</label>
-                    <input class="form-control" type="file" id="formFile">
-                </div>
-                <div class="mb-3">
-                    <label for="formRange" class="form-label">Range Slider</label>
-                    <input type="range" class="form-range" id="formRange">
-                </div>
-                </form>
+    <!-- 🧱 Basic Form Elements -->
+    <div class="card mb-5 shadow border-0 rounded-4">
+      <div class="card-header bg-success text-white rounded-top">
+        <i class="bi bi-pencil-square me-2"></i>Basic Form Elements
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <label for="formText" class="form-label fw-medium">Text Input</label>
+              <input type="text" class="form-control" id="formText" placeholder="Enter text">
             </div>
+            <div class="col-md-6">
+              <label for="formNumber" class="form-label fw-medium">Number Input</label>
+              <input type="number" class="form-control" id="formNumber" placeholder="0-100" min="1" max="100">
             </div>
+            <div class="col-12">
+              <label for="formTextarea" class="form-label fw-medium">Textarea</label>
+              <textarea class="form-control" id="formTextarea" rows="3" placeholder="Enter your message..."></textarea>
+            </div>
+            <div class="col-md-6">
+              <label for="formFile" class="form-label fw-medium">File Upload</label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="col-md-6">
+              <label for="formRange" class="form-label fw-medium">Range Slider</label>
+              <input type="range" class="form-range" id="formRange">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
-            <!-- Input Group with Addons -->
-            <div class="card shadow-sm rounded mb-5">
-            <div class="card-body">
-                <h5 class="fw-semibold mb-4">Input Groups</h5>
-                <form>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" placeholder="Username">
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Recipient's username">
-                    <span class="input-group-text">@example.com</span>
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">$</span>
-                    <input type="text" class="form-control" placeholder="Amount">
-                    <span class="input-group-text">.00</span>
-                </div>
-                </form>
-            </div>
-            </div>
+    <!-- 💬 Input Groups -->
+    <div class="card mb-5 shadow border-0 rounded-4">
+      <div class="card-header bg-info text-dark rounded-top">
+        <i class="bi bi-link-45deg me-2"></i>Input Groups
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="input-group mb-3">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" placeholder="Username">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient">
+            <span class="input-group-text">@example.com</span>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" placeholder="Amount">
+            <span class="input-group-text">.00</span>
+          </div>
+        </form>
+      </div>
+    </div>
 
-            <!-- Radios, Checkboxes, Switches -->
-            <div class="card shadow-sm rounded mb-5">
-            <div class="card-body">
-                <h5 class="fw-semibold mb-4">Options</h5>
-                <form>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="check1">
-                    <label class="form-check-label" for="check1">Checkbox option</label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="radioGroup" id="radio1" checked>
-                    <label class="form-check-label" for="radio1">Radio option 1</label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="radioGroup" id="radio2">
-                    <label class="form-check-label" for="radio2">Radio option 2</label>
-                </div>
-                <div class="form-check form-switch mt-3">
-                    <input class="form-check-input" type="checkbox" role="switch" id="switchCheck">
-                    <label class="form-check-label" for="switchCheck">Enable feature</label>
-                </div>
-                </form>
-            </div>
-            </div>
+    <!-- ✅ Options (Checkboxes, Radios, Switch) -->
+    <div class="card mb-5 shadow border-0 rounded-4">
+      <div class="card-header bg-warning text-dark rounded-top">
+        <i class="bi bi-toggle-on me-2"></i>Checkboxes, Radios, and Switches
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="optCheck1">
+            <label class="form-check-label" for="optCheck1">I agree to terms and conditions</label>
+          </div>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="radio" name="radioOpt" id="optRadio1" checked>
+            <label class="form-check-label" for="optRadio1">Option A</label>
+          </div>
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="radio" name="radioOpt" id="optRadio2">
+            <label class="form-check-label" for="optRadio2">Option B</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="optSwitch">
+            <label class="form-check-label" for="optSwitch">Enable Notifications</label>
+          </div>
+        </form>
+      </div>
+    </div>
 
-            <!-- Grid Layout Example -->
-            <div class="card shadow-sm rounded mb-5">
-            <div class="card-body">
-                <h5 class="fw-semibold mb-4">Grid-based Form</h5>
-                <form>
-                <div class="row g-3">
-                    <div class="col-md-6">
-                    <label for="gridFirst" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="gridFirst">
-                    </div>
-                    <div class="col-md-6">
-                    <label for="gridLast" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="gridLast">
-                    </div>
-                    <div class="col-12">
-                    <label for="gridEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="gridEmail">
-                    </div>
-                    <div class="col-12">
-                    <label for="gridAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="gridAddress" placeholder="1234 Main St">
-                    </div>
-                    <div class="col-md-6">
-                    <label for="gridCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="gridCity">
-                    </div>
-                    <div class="col-md-4">
-                    <label for="gridState" class="form-label">State</label>
-                    <select id="gridState" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>Delhi</option>
-                        <option>Mumbai</option>
-                        <option>Bangalore</option>
-                    </select>
-                    </div>
-                    <div class="col-md-2">
-                    <label for="gridZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="gridZip">
-                    </div>
-                    <div class="col-12">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                        Save this information
-                        </label>
-                    </div>
-                    </div>
-                    <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Submit Form</button>
-                    </div>
-                </div>
-                </form>
+    <!-- 🧩 Grid Form Example -->
+    <div class="card mb-5 shadow border-0 rounded-4">
+      <div class="card-header bg-dark text-white rounded-top">
+        <i class="bi bi-grid-1x2-fill me-2"></i>Grid Layout Form
+      </div>
+      <div class="card-body">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="gridFirst" class="form-label">First name</label>
+            <input type="text" class="form-control" id="gridFirst" placeholder="Gaurav">
+          </div>
+          <div class="col-md-6">
+            <label for="gridLast" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="gridLast" placeholder="Dixit">
+          </div>
+          <div class="col-md-12">
+            <label for="gridEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="gridEmail" placeholder="gaurav@example.com">
+          </div>
+          <div class="col-12">
+            <label for="gridAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="gridAddress" placeholder="1234 Main Street">
+          </div>
+          <div class="col-md-6">
+            <label for="gridCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="gridCity" placeholder="Delhi">
+          </div>
+          <div class="col-md-4">
+            <label for="gridState" class="form-label">State</label>
+            <select id="gridState" class="form-select">
+              <option selected>Choose...</option>
+              <option>Delhi</option>
+              <option>Mumbai</option>
+              <option>Bangalore</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="gridZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="gridZip" placeholder="110001">
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">Save this information</label>
             </div>
-            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-dark btn-lg w-100 shadow-sm">Submit Form</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
-        </div>
-        </section>
+  </div>
+</section>
+
 
   <section id="cards-media" data-aos="fade-up">
         <div class="container">
@@ -1336,11 +1396,170 @@
 
 
   <section id="tables" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Tables & Pagination</h2>
-      <!-- Table & pagination -->
+  <div class="container">
+    <h2 class="section-title text-center">Tables & Pagination</h2>
+    <p class="text-center text-muted mb-5">
+      Display data cleanly with styled tables and intuitive pagination options.
+    </p>
+
+    <!-- 🎯 Enhanced Responsive Table -->
+    <div class="card shadow rounded mb-5 border-start border-primary border-4">
+      <div class="card-header bg-primary text-white rounded-top">
+        <i class="bi bi-table me-2"></i>Professional User Table
+      </div>
+      <div class="card-body table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>Name <i class="bi bi-sort-alpha-down ms-1"></i></th>
+              <th>Email</th>
+              <th>Role</th>
+              <th class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>Alice Johnson</td>
+              <td>alice@example.com</td>
+              <td><span class="badge bg-success">Admin</span></td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>Bob Smith</td>
+              <td>bob@example.com</td>
+              <td><span class="badge bg-info text-dark">Editor</span></td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>Carol Lee</td>
+              <td>carol@example.com</td>
+              <td><span class="badge bg-warning text-dark">Viewer</span></td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </section>
+
+    <!-- 🎨 Styled Table Variants -->
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card shadow-sm border-start border-success border-4">
+          <div class="card-header bg-success text-white">
+            <i class="bi bi-list-check me-2"></i>Striped Product Table
+          </div>
+          <div class="card-body table-responsive">
+            <table class="table table-striped mb-0">
+              <thead>
+                <tr><th>#</th><th>Product</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Laptop</td><td>In Stock</td></tr>
+                <tr><td>2</td><td>Phone</td><td>Out of Stock</td></tr>
+                <tr><td>3</td><td>Tablet</td><td>Limited</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm border-start border-info border-4">
+          <div class="card-header bg-info text-dark">
+            <i class="bi bi-mouse2 me-2"></i>Hover Status Table
+          </div>
+          <div class="card-body table-responsive">
+            <table class="table table-hover mb-0">
+              <thead>
+                <tr><th>#</th><th>Device</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Monitor</td><td>Active</td></tr>
+                <tr><td>2</td><td>Keyboard</td><td>Idle</td></tr>
+                <tr><td>3</td><td>Mouse</td><td>Disconnected</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm border-start border-warning border-4">
+          <div class="card-header bg-warning text-dark">
+            <i class="bi bi-hdd me-2"></i>Bordered Service Table
+          </div>
+          <div class="card-body table-responsive">
+            <table class="table table-bordered mb-0">
+              <thead>
+                <tr><th>#</th><th>Service</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>API</td><td>Online</td></tr>
+                <tr><td>2</td><td>Database</td><td>Offline</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm border-start border-dark border-4">
+          <div class="card-header bg-dark text-white">
+            <i class="bi bi-controller me-2"></i>Dark Leaderboard Table
+          </div>
+          <div class="card-body table-responsive">
+            <table class="table table-dark table-striped mb-0">
+              <thead>
+                <tr><th>#</th><th>Player</th><th>Score</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Player A</td><td>89</td></tr>
+                <tr><td>2</td><td>Player B</td><td>95</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📄 Pagination -->
+    <div class="card shadow-sm rounded mt-5">
+      <div class="card-body text-center">
+        <h5 class="fw-semibold mb-4">Pagination Variants</h5>
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled"><a class="page-link">Previous</a></li>
+          <li class="page-item active"><a class="page-link">1</a></li>
+          <li class="page-item"><a class="page-link">2</a></li>
+          <li class="page-item"><a class="page-link">3</a></li>
+          <li class="page-item"><a class="page-link">Next</a></li>
+        </ul>
+
+        <div class="mt-3">
+          <ul class="pagination pagination-sm justify-content-center mb-2">
+            <li class="page-item active"><a class="page-link">1</a></li>
+            <li class="page-item"><a class="page-link">2</a></li>
+          </ul>
+          <ul class="pagination pagination-lg justify-content-center">
+            <li class="page-item"><a class="page-link">1</a></li>
+            <li class="page-item active"><a class="page-link">2</a></li>
+            <li class="page-item"><a class="page-link">3</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- 🔝 Back to Top Button -->
   <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
@@ -1409,6 +1628,17 @@
     });
   }
   </script>
-  
+  <!-- 🌐 Footer -->
+<!-- 🌐 Footer -->
+<footer class="bg-light text-center py-4 mt-5 shadow-sm">
+  <div class="container">
+    <p class="mb-2 fw-semibold fs-5">Bootstrap Showcase</p>
+    <p class="mb-2 text-muted">Crafted with passion and precision by <strong>Gaurav Dixit</strong></p>
+    <a href="https://github.com/gaurav-dixit35" target="_blank" class="text-dark fs-4">
+      <i class="bi bi-github"></i>
+    </a>
+  </div>
+</footer>
+
 </body>
 </html>
