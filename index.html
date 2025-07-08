@@ -193,7 +193,31 @@
     }
 
 /*Carousel*/
+    body.dark-mode .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #f0f0f0;
+    }
+
+    body.dark-mode .carousel-control-prev-icon,
+    body.dark-mode .carousel-control-next-icon {
+    filter: invert(1);
+    }
+
 /*Alerts, Toasts & Tooltips*/
+    body.dark-mode .alert-light {
+    background-color: #2d2f3d;
+    color: #fff;
+    }
+
+    body.dark-mode .toast {
+    background-color: #343a40;
+    color: #eee;
+    }
+
+    body.dark-mode .btn-close {
+    filter: invert(1);
+    }
+
 /*Tables & Pagination*/
 
   </style>
@@ -1124,18 +1148,192 @@
 
 
   <section id="carousel" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Carousel</h2>
-      <!-- Carousel example -->
-    </div>
-  </section>
+        <div class="container">
+            <h2 class="section-title text-center">Carousel</h2>
+            <p class="text-center text-muted mb-5">
+            Bootstrap 5 carousels are flexible content sliders with transitions, captions, and responsive behavior.
+            </p>
+
+            <!-- 1. Standard Carousel with Captions -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="fw-semibold mb-4">Standard Carousel</h5>
+                <div id="carouselStandard" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselStandard" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselStandard" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselStandard" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                    <img src="https://i.postimg.cc/fWjzVSWY/h.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Eat</h5>
+                        <p>Experience the beauty of Food.</p>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://i.postimg.cc/tCwMy20k/o.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Code</h5>
+                        <p>Feel the energy of Yours.</p>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://i.postimg.cc/P52WMqt7/i.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Sleep</h5>
+                        <p>Explore futuristic tech.</p>
+                    </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselStandard" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselStandard" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                </div>
+            </div>
+            </div>
+
+            <!-- 2. Fade Transition Carousel -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="fw-semibold mb-4">Fade Transition Carousel</h5>
+                <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                    <img src="https://i.postimg.cc/tRrcv92L/p.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Eat</h5>
+                        <p>Tom tech</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://i.postimg.cc/v8KH5wFv/l.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Code</h5>
+                        <p>Tom tech</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://i.postimg.cc/d1FMFnyp/m.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Sleep</h5>
+                        <p>Tom tech</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- 3. Autoplay Carousel (with JavaScript control) -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="fw-semibold mb-4">Autoplay Carousel</h5>
+                <div id="carouselAuto" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                    <img src="https://i.postimg.cc/tCwMy20k/o.jpg" class="d-block w-100" alt="...">
+                    
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://i.postimg.cc/d1FMFnyp/m.jpg" class="d-block w-100" alt="...">
+                    
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://i.postimg.cc/fWjzVSWY/h.jpg" class="d-block w-100" alt="...">
+                    
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAuto" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselAuto" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
 
   <section id="alerts-tools" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Alerts, Toasts & Tooltips</h2>
-      <!-- Alerts/toasts/tooltips -->
-    </div>
-  </section>
+        <div class="container">
+            <h2 class="section-title text-center">Alerts, Toasts & Tooltips</h2>
+            <p class="text-center text-muted mb-5">
+            Notify, guide, and interact with users using Bootstrap's alerts, toasts, and tooltips.
+            </p>
+
+            <!-- 🎯 Alerts -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="fw-semibold mb-4">Alert Types</h5>
+                <div class="alert alert-primary" role="alert">A simple primary alert—check it out!</div>
+                <div class="alert alert-secondary" role="alert">A secondary alert with subtle tone.</div>
+                <div class="alert alert-success" role="alert">Success! Your action was completed.</div>
+                <div class="alert alert-danger" role="alert">Danger! Something went wrong.</div>
+                <div class="alert alert-warning" role="alert">Warning! Be careful with this step.</div>
+                <div class="alert alert-info" role="alert">Info! Here's something informative.</div>
+                <div class="alert alert-light border" role="alert">Light alert with soft styling.</div>
+                <div class="alert alert-dark text-white" role="alert">Dark alert with bold contrast.</div>
+            </div>
+            </div>
+
+            <!-- ✖️ Dismissible Alert -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="fw-semibold mb-4">Dismissible Alert</h5>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Heads up!</strong> You can close this alert.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            </div>
+            </div>
+
+            <!-- 🛎 Toast Example -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body position-relative">
+                <h5 class="fw-semibold mb-4">Toast Notification</h5>
+                <button class="btn btn-primary" id="showToastBtn">Show Toast</button>
+
+                <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055">
+                <div id="customToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                    <div class="toast-body">
+                        ✅ Action completed successfully!
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- 💡 Tooltips -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body text-center">
+                <h5 class="fw-semibold mb-4">Tooltips</h5>
+                <button type="button" class="btn btn-outline-primary me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                Hover Top
+                </button>
+                <button type="button" class="btn btn-outline-secondary me-3" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+                Hover Right
+                </button>
+                <button type="button" class="btn btn-outline-success me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+                Hover Bottom
+                </button>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+                Hover Left
+                </button>
+            </div>
+            </div>
+        </div>
+        </section>
+
 
   <section id="tables" data-aos="fade-up">
     <div class="container">
@@ -1189,6 +1387,27 @@
       toggleButtons.forEach(b => b?.classList.toggle('btn-outline-light'));
     });
   });
+  // Optional JS tweak: Autoplay interval for #carouselAuto
+  const autoCarousel = document.querySelector('#carouselAuto');
+  const bsCarousel = new bootstrap.Carousel(autoCarousel, {
+    interval: 3000,
+    ride: 'carousel',
+    pause: false
+  });
+   // ✅ Enable Tooltips
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+    new bootstrap.Tooltip(el);
+  });
+
+  // ✅ Toast Trigger
+  const toastTrigger = document.getElementById('showToastBtn');
+  const toastLive = document.getElementById('customToast');
+  if (toastTrigger) {
+    toastTrigger.addEventListener('click', () => {
+      const toast = new bootstrap.Toast(toastLive);
+      toast.show();
+    });
+  }
   </script>
   
 </body>
