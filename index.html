@@ -64,6 +64,66 @@
     .back-to-top:hover {
       background-color: #4b4de7;
     }
+     body.dark-mode {
+    background: linear-gradient(to bottom, #1f1f2e, #11111c);
+    color: #f0f0f0;
+  }
+
+  body.dark-mode .navbar {
+    background-color: #2a2a3b !important;
+  }
+
+  body.dark-mode .section-title {
+    color: #f9f9f9;
+  }
+
+  body.dark-mode .hero {
+    background: linear-gradient(to right, #2d2a58, #3c356b);
+    color: white;
+  }
+
+  body.dark-mode .btn-cta {
+    background-color: #444;
+    color: #eee;
+  }
+
+  body.dark-mode .btn-cta:hover {
+    background-color: #555;
+  }
+
+  body.dark-mode .back-to-top {
+    background-color: #444;
+  }
+
+  body.dark-mode .back-to-top:hover {
+    background-color: #666;
+  }
+  /*Graph&grid*/
+  body.dark-mode .bg-light {
+    background-color: #2c2c3a !important;
+    color: #e0e0e0;
+    }
+
+    body.dark-mode .bg-white {
+    background-color: #3a3a4d !important;
+    color: #ddd;
+    }
+
+    body.dark-mode .border {
+    border-color: #555 !important;
+    }
+    /* Typography */
+    body.dark-mode .card {
+    background-color: #2a2a3b;
+    color: #f0f0f0;
+    }
+
+    body.dark-mode blockquote {
+    border-left: 4px solid #888;
+    color: #ccc;
+    }
+
+
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
@@ -72,6 +132,10 @@
   <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Bootstrap Showcase</a>
+      <button id="themeToggle" class="btn btn-outline-dark ms-auto d-lg-none">
+        <i class="bi bi-moon"></i>
+        </button>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -87,6 +151,12 @@
           <li class="nav-item"><a class="nav-link" href="#carousel">Carousel</a></li>
           <li class="nav-item"><a class="nav-link" href="#alerts-tools">Alerts</a></li>
           <li class="nav-item"><a class="nav-link" href="#tables">Tables</a></li>
+          <li class="nav-item me-2">
+            <button id="themeToggleDesktop" class="btn btn-outline-dark">
+                <i class="bi bi-moon"></i>
+            </button>
+          </li>
+
         </ul>
       </div>
     </div>
@@ -124,19 +194,183 @@
   </header>
 
   <!-- 🧩 Component Sections Placeholder -->
-  <section id="grid-layout" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Grid & Layout</h2>
-      <!-- Grid content goes here -->
-    </div>
-  </section>
+    <section id="grid-layout" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title text-center">Grid & Layout</h2>
+            <p class="text-center text-muted mb-5">
+            Bootstrap’s 12-column responsive grid system allows flexible layouts across screen sizes.
+            </p>
+
+            <!-- 1. Responsive Column Layout -->
+            <div class="row text-center mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="p-4 shadow-sm rounded bg-light h-100">.col-12 .col-md-6 .col-lg-4</div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="p-4 shadow-sm rounded bg-light h-100">.col-12 .col-md-6 .col-lg-4</div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="p-4 shadow-sm rounded bg-light h-100">.col-12 .col-md-6 .col-lg-4</div>
+            </div>
+            </div>
+
+            <!-- 2. Equal Columns -->
+            <div class="row text-center mb-4">
+            <div class="col-6 col-md-3">
+                <div class="p-3 bg-light shadow-sm rounded">.col-6 .col-md-3</div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 bg-light shadow-sm rounded">.col-6 .col-md-3</div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 bg-light shadow-sm rounded">.col-6 .col-md-3</div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 bg-light shadow-sm rounded">.col-6 .col-md-3</div>
+            </div>
+            </div>
+
+            <!-- 3. Nested Grid Example -->
+            <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="p-3 bg-light rounded shadow-sm h-100">
+                <strong>Parent: .col-md-6</strong>
+                <div class="row mt-3">
+                    <div class="col-6">
+                    <div class="p-2 bg-white border rounded small">Nested: .col-6</div>
+                    </div>
+                    <div class="col-6">
+                    <div class="p-2 bg-white border rounded small">Nested: .col-6</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-3 bg-light rounded shadow-sm h-100">Another .col-md-6</div>
+            </div>
+            </div>
+
+            <!-- 4. Gutter (Spacing) Demo -->
+            <h5 class="mt-5 mb-3">Gutter Spacing</h5>
+            <div class="row row-cols-2 row-cols-md-4 g-4">
+            <div class="col"><div class="p-3 bg-light shadow-sm rounded text-center">.col</div></div>
+            <div class="col"><div class="p-3 bg-light shadow-sm rounded text-center">.col</div></div>
+            <div class="col"><div class="p-3 bg-light shadow-sm rounded text-center">.col</div></div>
+            <div class="col"><div class="p-3 bg-light shadow-sm rounded text-center">.col</div></div>
+            </div>
+        </div>
+        </section>
+
+
+  
 
   <section id="typography" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Typography</h2>
-      <!-- Typography examples -->
-    </div>
-  </section>
+        <div class="container">
+            <h2 class="section-title text-center">Typography</h2>
+            <p class="text-center text-muted mb-5">
+            Explore Bootstrap's powerful and responsive typography system — from headings to blockquotes.
+            </p>
+
+            <!-- Headings -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="mb-4 fw-semibold">Headings</h5>
+                <h1>h1. Bootstrap heading</h1>
+                <h2>h2. Bootstrap heading</h2>
+                <h3>h3. Bootstrap heading</h3>
+                <h4>h4. Bootstrap heading</h4>
+                <h5>h5. Bootstrap heading</h5>
+                <h6>h6. Bootstrap heading</h6>
+            </div>
+            </div>
+
+            <!-- Display Headings -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="mb-4 fw-semibold">Display Headings</h5>
+                <h1 class="display-1">Display 1</h1>
+                <h2 class="display-2">Display 2</h2>
+                <h3 class="display-3">Display 3</h3>
+                <h4 class="display-4">Display 4</h4>
+                <h5 class="display-5">Display 5</h5>
+                <h6 class="display-6">Display 6</h6>
+            </div>
+            </div>
+
+            <!-- Lead and Paragraph -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="mb-4 fw-semibold">Lead & Paragraph</h5>
+                <p class="lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
+                <p>This is a regular paragraph using Bootstrap's base typography system. Resize your browser to see responsive scaling.</p>
+            </div>
+            </div>
+
+            <!-- Text Utilities -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="mb-4 fw-semibold">Text Utilities</h5>
+                <p class="text-start">Left aligned text.</p>
+                <p class="text-center">Center aligned text.</p>
+                <p class="text-end">Right aligned text.</p>
+                <p class="text-lowercase">Lowercased text.</p>
+                <p class="text-uppercase">Uppercased text.</p>
+                <p class="text-capitalize">capitalized text.</p>
+                <p class="fw-bold">Bold text.</p>
+                <p class="fw-light">Light weight text.</p>
+                <p class="fst-italic">Italic text.</p>
+                <p class="text-muted">Muted color text.</p>
+            </div>
+            </div>
+
+            <!-- Blockquote -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="mb-4 fw-semibold">Blockquote</h5>
+                <blockquote class="blockquote">
+                <p>“The only way to do great work is to love what you do.”</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mt-2">
+                Steve Jobs <cite title="Source Title">Apple Keynote</cite>
+                </figcaption>
+            </div>
+            </div>
+
+            <!-- Lists -->
+            <div class="card shadow-sm rounded mb-5">
+            <div class="card-body">
+                <h5 class="mb-4 fw-semibold">Lists</h5>
+                <div class="row">
+                <div class="col-md-4">
+                    <h6>Unordered List</h6>
+                    <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6>Ordered List</h6>
+                    <ol>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    </ol>
+                </div>
+                <div class="col-md-4">
+                    <h6>Unstyled List</h6>
+                    <ul class="list-unstyled">
+                    <li>Item without bullets</li>
+                    <li>Still no bullets</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </section>
+
 
   <section id="buttons" data-aos="fade-up">
     <div class="container">
@@ -215,6 +449,31 @@
         topBtn.style.display = 'none';
       }
     });
+    // dark mode
+    AOS.init();
+
+  
+
+  // 🌓 Dark Mode Toggle
+  const toggleButtons = [document.getElementById('themeToggle'), document.getElementById('themeToggleDesktop')];
+  const body = document.body;
+
+  // Load saved theme
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggleButtons.forEach(btn => btn?.classList.replace('btn-outline-dark', 'btn-outline-light'));
+  }
+
+  toggleButtons.forEach(btn => {
+    btn?.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      toggleButtons.forEach(b => b?.classList.toggle('btn-outline-dark'));
+      toggleButtons.forEach(b => b?.classList.toggle('btn-outline-light'));
+    });
+  });
   </script>
+  
 </body>
 </html>
