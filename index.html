@@ -52,17 +52,33 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background-color: #6c5ce7;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
-      display: none;
       z-index: 999;
+      padding: 12px 14px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+      color: white;
+      font-size: 1.5rem;
+      display: none;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
+      transition: all 0.3s ease-in-out;
     }
 
     .back-to-top:hover {
-      background-color: #4b4de7;
+      transform: scale(1.15) rotate(-5deg);
+      background: linear-gradient(135deg, #8e44ad, #6c5ce7);
+      box-shadow: 0 12px 25px rgba(108, 92, 231, 0.45);
+    }
+
+    .dark-mode .back-to-top {
+      background: linear-gradient(135deg, #2d2a4a, #4b4de7);
+      color: #fff;
+      box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .dark-mode .back-to-top:hover {
+      background: linear-gradient(135deg, #1f1d35, #6c5ce7);
     }
      body.dark-mode {
     background: linear-gradient(to bottom, #1f1f2e, #11111c);
@@ -1617,10 +1633,11 @@
 </section>
 
 
-  <!-- 🔝 Back to Top Button -->
-  <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-    <i class="bi bi-arrow-up"></i>
-  </button>
+  <!-- 🔝 Cool Back to Top Button -->
+<button class="back-to-top btn btn-primary shadow-lg" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+  <i class="bi bi-arrow-up-circle-fill fs-3"></i>
+</button>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
