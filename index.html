@@ -377,53 +377,51 @@
 .scroll-info-strip {
   position: absolute;
   top: 0;
-  right: 0;
-  width: 300px;
-  height: 100vh;
-  background: linear-gradient(to bottom, #8e44ad, #3498db);
+  left: 100vw; /* hide it to the right of the visible page */
+  width: 400px;
+  height: 54vh;
+  background: linear-gradient(to bottom right, #8e44ad, #3498db);
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
   text-align: center;
-  padding: 20px;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4);
-  animation: slide-in-right 1s ease-out;
+  padding: 3rem 2rem;
+  z-index: 100;
+  display: none; /* Hide initially */
+  animation: slide-in-right 0.6s ease-out;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .scroll-info-strip h2 {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   animation: pulse 1.5s infinite;
 }
 
 .scroll-info-strip i {
   font-size: 2rem;
-  margin: 1rem 0;
+  margin: 0rem 0;
   animation: bounce 2s infinite;
 }
 
 @keyframes slide-in-right {
   from {
+    opacity: 0;
     transform: translateX(100%);
   }
   to {
+    opacity: 1;
     transform: translateX(0%);
   }
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0);}
-  50% { transform: translateY(-10px);}
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
 }
-
 
 
   </style>
@@ -1815,18 +1813,27 @@ window.addEventListener("scroll", () => {
 
 
   </script>
-  <script>
-  const strip = document.querySelector('.scroll-info-strip');
-  if (strip) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollX > 100) {
-        strip.style.opacity = "1";
-      } else {
-        strip.style.opacity = "0.7";
-      }
-    });
-  }
+  
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+  const scrollInfo = document.querySelector('.scroll-info-strip');
+  if (!scrollInfo) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollX = window.scrollX;
+    const pageWidth = document.documentElement.clientWidth;
+    const totalWidth = document.documentElement.scrollWidth;
+
+    if (scrollX > (totalWidth - pageWidth - 200)) {
+      scrollInfo.style.display = "flex";
+    } else {
+      scrollInfo.style.display = "none";
+    }
+  });
+});
+
 </script>
+
 
   <!-- 🌐 Footer -->
 <!-- 🌐 Footer -->
@@ -1839,12 +1846,14 @@ window.addEventListener("scroll", () => {
     </a>
   </div>
 </footer>
-<div class="scroll-info-strip">
-  <h2>👉 Side Scroll Activated!</h2>
+<div class="scroll-info-strip flex-column justify-content-center align-items-center">
+  
+  <h2>Side Scroll Function</h2>
   <i class="bi bi-arrows-angle-expand"></i>
-  <p>This space is intentional.<br>Bootstrap’s responsive grid <strong>supports horizontal layouts too!</strong></p>
-  <p class="mt-2"><i class="bi bi-bootstrap-fill fs-4"></i><br>Try scrolling 👉</p>
+  <p>This space is intentional.<br><strong>Bootstrap’s responsive grid supports horizontal layouts too!</strong></p>
+  <p class="mt-2"><i class="bi bi-bootstrap-fill fs-4"></i><br>💜</p>
 </div>
+
 
 </body>
 </html>
