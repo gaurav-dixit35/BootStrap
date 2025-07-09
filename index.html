@@ -373,40 +373,57 @@
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* horizontal scroll */
-/* Scroll Info Banner */
-.scroll-info-banner {
-  position: fixed;
-  top: 50%;
-  right: -100px; /* Pull into scrollbar zone */
-  transform: rotate(90deg) translateY(-50%);
-  transform-origin: right center;
-  background: #6c5ce7;
+/*hscroll*/
+.scroll-info-strip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #8e44ad, #3498db);
   color: white;
-  font-weight: 600;
-  padding: 8px 20px;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  z-index: 9999;
-  animation: slideInRight 1.2s ease forwards;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  text-align: center;
+  padding: 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4);
+  animation: slide-in-right 1s ease-out;
 }
 
-@keyframes slideInRight {
-  0% {
-    right: -200px;
-    opacity: 0;
+.scroll-info-strip h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  animation: pulse 1.5s infinite;
+}
+
+.scroll-info-strip i {
+  font-size: 2rem;
+  margin: 1rem 0;
+  animation: bounce 2s infinite;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
   }
-  100% {
-    right: -100px;
-    opacity: 1;
+  to {
+    transform: translateX(0%);
   }
 }
 
-.scroll-info-banner:hover {
-  background: #8e44ad;
-  cursor: default;
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-10px);}
 }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
 
 
   </style>
@@ -1726,15 +1743,7 @@
   <script>
     AOS.init();
 
-    // Show back-to-top on scroll
-    const topBtn = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        topBtn.style.display = 'block';
-      } else {
-        topBtn.style.display = 'none';
-      }
-    });
+   
     // dark mode
     AOS.init();
 
@@ -1806,6 +1815,19 @@ window.addEventListener("scroll", () => {
 
 
   </script>
+  <script>
+  const strip = document.querySelector('.scroll-info-strip');
+  if (strip) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollX > 100) {
+        strip.style.opacity = "1";
+      } else {
+        strip.style.opacity = "0.7";
+      }
+    });
+  }
+</script>
+
   <!-- 🌐 Footer -->
 <!-- 🌐 Footer -->
 <footer class="bg-light text-center py-4 mt-5 shadow-sm">
@@ -1817,6 +1839,12 @@ window.addEventListener("scroll", () => {
     </a>
   </div>
 </footer>
+<div class="scroll-info-strip">
+  <h2>👉 Side Scroll Activated!</h2>
+  <i class="bi bi-arrows-angle-expand"></i>
+  <p>This space is intentional.<br>Bootstrap’s responsive grid <strong>supports horizontal layouts too!</strong></p>
+  <p class="mt-2"><i class="bi bi-bootstrap-fill fs-4"></i><br>Try scrolling 👉</p>
+</div>
 
 </body>
 </html>
