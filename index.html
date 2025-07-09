@@ -48,22 +48,80 @@
       margin-bottom: 30px;
     }
 
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #6c5ce7;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
-      display: none;
-      z-index: 999;
-    }
+    /* Cool Back-to-Top Button */
+.back-to-top-indicator {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  z-index: 999;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.4);
+}
 
-    .back-to-top:hover {
-      background-color: #4b4de7;
-    }
+.back-to-top-indicator:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* SVG Circle */
+.progress-circle {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-bg,
+.progress-bar {
+  fill: none;
+  stroke-width: 8;
+  cx: 50;
+  cy: 50;
+  r: 45;
+}
+
+.progress-bg {
+  stroke: rgba(255, 255, 255, 0.2);
+}
+
+.progress-bar {
+  stroke: #fff;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 0.2s ease-out;
+}
+
+/* % Text in Center */
+.percent-text {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: bold;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Dark mode support */
+.dark-mode .back-to-top-indicator {
+  background: linear-gradient(135deg, #2d2a4a, #6c5ce7);
+  color: white;
+}
+.percent-text i {
+  vertical-align: middle;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
      body.dark-mode {
     background: linear-gradient(to bottom, #1f1f2e, #11111c);
     color: #f0f0f0;
@@ -314,6 +372,40 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* horizontal scroll */
+/* Scroll Info Banner */
+.scroll-info-banner {
+  position: fixed;
+  top: 50%;
+  right: -100px; /* Pull into scrollbar zone */
+  transform: rotate(90deg) translateY(-50%);
+  transform-origin: right center;
+  background: #6c5ce7;
+  color: white;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  animation: slideInRight 1.2s ease forwards;
+  white-space: nowrap;
+}
+
+@keyframes slideInRight {
+  0% {
+    right: -200px;
+    opacity: 0;
+  }
+  100% {
+    right: -100px;
+    opacity: 1;
+  }
+}
+
+.scroll-info-banner:hover {
+  background: #8e44ad;
+  cursor: default;
 }
 
 
@@ -1617,10 +1709,15 @@
 </section>
 
 
-  <!-- 🔝 Back to Top Button -->
-  <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-    <i class="bi bi-arrow-up"></i>
-  </button>
+  <!-- 🔝 Back to Top Button with Percentage -->
+<button class="back-to-top-indicator" id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+  <svg class="progress-circle" viewBox="0 0 100 100">
+    <circle class="progress-bg" cx="50" cy="50" r="45" />
+    <circle class="progress-bar" cx="50" cy="50" r="45" />
+  </svg>
+  <span class="percent-text" id="scrollPercent">0%</span>
+</button>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -1683,7 +1780,31 @@
       toast.show();
     });
   }
-  
+  const backToTop = document.getElementById("backToTop");
+const scrollPercent = document.getElementById("scrollPercent");
+const progressBar = document.querySelector(".progress-bar");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollValue = Math.round((scrollTop / docHeight) * 100);
+  const offset = 283 - (283 * scrollValue) / 100;
+
+  // Update circle offset
+  progressBar.style.strokeDashoffset = offset;
+
+  // Update percent text or icon
+  if (scrollValue >= 100) {
+    scrollPercent.innerHTML = `<i class="bi bi-arrow-up-short fs-4"></i>`;
+  } else {
+    scrollPercent.innerText = `${scrollValue}%`;
+  }
+
+  // Show/hide button
+  backToTop.style.display = scrollTop > 100 ? "flex" : "none";
+});
+
+
   </script>
   <!-- 🌐 Footer -->
 <!-- 🌐 Footer -->
