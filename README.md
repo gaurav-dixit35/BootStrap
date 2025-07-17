@@ -77,4 +77,40 @@ We welcome contributors of all levels. You can:
 - Make your changes
 - Commit and push
 - Open a Pull Request
+  
+---
 
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/hand-thumbs-up.svg" width="20" /> Special Thanks
+
+Special thanks to:
+
+- [Bootstrap Team](https://getbootstrap.com) for the framework  
+- [Bootstrap Icons](https://icons.getbootstrap.com) for UI icons  
+- All testers and contributors from the community 💪
+
+---
+
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/person-circle.svg" width="20" /> Author
+
+**Created by Gaurav Dixit**  
+🔗 GitHub: [@yourusername](https://github.com/yourusername)
+
+---
+
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/shield-lock.svg" width="20" /> License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## ✅ Conclusion
+
+**Bootstrap Showcase** isn’t just a component playground — it’s a professional, animated, and scalable UI demonstration template.  
+Whether you're learning Bootstrap or preparing a client-facing prototype, this project is your perfect start.
+
+---
+
+## 🙏 Thank You
+
+Thank you for checking out this project.  
+If you liked it, don’t forget to ⭐ [star the repo](https://github.com/yourusername/bootstrap-showcase) on GitHub!
