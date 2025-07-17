@@ -50,17 +50,6 @@
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/lightbulb.svg" width="20" /> Suggested Features to Add
-
-- 🌐 **Multi-language translation support**  
-- 🧠 **AI-powered smart search**  
-- 🎙️ **Voice-assisted navigation**  
-- 🧩 **Drag-and-drop layout builder**  
-- 📈 **Real-time component usage metrics**  
-- 🔒 **Accessibility and ARIA testing module**
-
----
-
 ## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/bug.svg" width="20" /> Bug Reports
 
 Found an issue or a visual glitch?
@@ -83,10 +72,9 @@ We welcome contributors of all levels. You can:
 
 **Workflow:**
 
-```bash
-# Fork the repo
-# Create a feature branch
-# Make your changes
-# Commit and push
-# Open a Pull Request
+- Fork the repo
+- Create a feature branch
+- Make your changes
+- Commit and push
+- Open a Pull Request
 
