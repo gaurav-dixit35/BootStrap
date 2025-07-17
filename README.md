@@ -54,7 +54,7 @@
 
 Found an issue or a visual glitch?
 
-1. Go to the [Issues](https://github.com/yourusername/bootstrap-showcase/issues) tab  
+1. Go to the [Issues](https://github.com/gaurav-dixit35/bootstrap-showcase/issues) tab  
 2. Click **New Issue**  
 3. Provide clear steps to reproduce the problem  
 4. (Optional) Add screenshots, logs, or code references
@@ -93,15 +93,10 @@ Special thanks to:
 ## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/person-circle.svg" width="20" /> Author
 
 **Created by Gaurav Dixit**  
-🔗 GitHub: [@yourusername](https://github.com/yourusername)
+🔗 GitHub: [Gaurav Dixit](https://github.com/gaurav-dixit35)
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/shield-lock.svg" width="20" /> License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
 
 ## ✅ Conclusion
 
@@ -113,4 +108,4 @@ Whether you're learning Bootstrap or preparing a client-facing prototype, this p
 ## 🙏 Thank You
 
 Thank you for checking out this project.  
-If you liked it, don’t forget to ⭐ [star the repo](https://github.com/yourusername/bootstrap-showcase) on GitHub!
+If you liked it, don’t forget to ⭐ [star the repo](https://github.com/gaurav-dixit35/bootstrap-showcase) on GitHub!
