@@ -14,6 +14,12 @@
 
 **Bootstrap Showcase** is a fully responsive, animated, and single-page Bootstrap 5 website designed to demonstrate every key component of Bootstrap in action. It’s clean, modern, and developer-friendly — perfect as a reference, educational tool, or starter template.
 
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/globe.svg" width="20" /> Live Preview
+
+Explore the full project live:
+
+🔗 [**Visit Website**](https://bootstraap.netlify.app/)  
+Hosted on **Netlify** — Fast. Reliable. Free.
 ---
 
 ## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/list-check.svg" width="20" /> Features
