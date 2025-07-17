@@ -19,7 +19,7 @@
 Explore the full project live:
 
 🔗 [**Visit Website**](https://bootstraap.netlify.app/)  
-Hosted on **Netlify** — Fast. Reliable. Free.
+Deployed with **Netlify**.
 ---
 
 ## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/list-check.svg" width="20" /> Features
