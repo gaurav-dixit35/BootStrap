@@ -50,12 +50,43 @@
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/code-slash.svg" width="20" /> How to Use
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/lightbulb.svg" width="20" /> Suggested Features to Add
+
+- 🌐 **Multi-language translation support**  
+- 🧠 **AI-powered smart search**  
+- 🎙️ **Voice-assisted navigation**  
+- 🧩 **Drag-and-drop layout builder**  
+- 📈 **Real-time component usage metrics**  
+- 🔒 **Accessibility and ARIA testing module**
+
+---
+
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/bug.svg" width="20" /> Bug Reports
+
+Found an issue or a visual glitch?
+
+1. Go to the [Issues](https://github.com/yourusername/bootstrap-showcase/issues) tab  
+2. Click **New Issue**  
+3. Provide clear steps to reproduce the problem  
+4. (Optional) Add screenshots, logs, or code references
+
+---
+
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/people.svg" width="20" /> Collaboration
+
+We welcome contributors of all levels. You can:
+
+- Improve animations or responsiveness  
+- Add new Bootstrap components or features  
+- Clean and refactor the codebase  
+- Suggest or implement new ideas  
+
+**Workflow:**
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/bootstrap-showcase.git
+# Fork the repo
+# Create a feature branch
+# Make your changes
+# Commit and push
+# Open a Pull Request
 
-# Open the file directly
-cd bootstrap-showcase
-open index.html   # or just double click index.html
