@@ -10,11 +10,11 @@
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/lightning.svg" width="20" /> Project Overview
+## Project Overview
 
 **Bootstrap Showcase** is a fully responsive, animated, and single-page Bootstrap 5 website designed to demonstrate every key component of Bootstrap in action. It’s clean, modern, and developer-friendly — perfect as a reference, educational tool, or starter template.
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/globe.svg" width="20" /> Live Preview
+## Live Preview
 
 Explore the full project live:
 
@@ -22,7 +22,7 @@ Explore the full project live:
 Deployed with **Netlify**.
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/list-check.svg" width="20" /> Features
+## Features
 
 - <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/palette.svg" width="16" /> Neumorphism + Flat Design UI  
 - <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/brightness-high.svg" width="16" /> Light & Dark Mode Toggle  
@@ -44,7 +44,7 @@ Deployed with **Netlify**.
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/gear.svg" width="20" /> Tech Stack
+## Tech Stack
 
 | Tech            | Description                    |
 |-----------------|--------------------------------|
@@ -56,7 +56,7 @@ Deployed with **Netlify**.
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/bug.svg" width="20" /> Bug Reports
+## Bug Reports
 
 Found an issue or a visual glitch?
 
@@ -67,7 +67,7 @@ Found an issue or a visual glitch?
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/people.svg" width="20" /> Collaboration
+## Collaboration
 
 We welcome contributors of all levels. You can:
 
@@ -86,7 +86,7 @@ We welcome contributors of all levels. You can:
   
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/hand-thumbs-up.svg" width="20" /> Special Thanks
+## Special Thanks
 
 Special thanks to:
 
@@ -96,7 +96,7 @@ Special thanks to:
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/person-circle.svg" width="20" /> Author
+## Author
 
 **Created by Gaurav Dixit**  
 🔗 GitHub: [Gaurav Dixit](https://github.com/gaurav-dixit35)
@@ -104,14 +104,14 @@ Special thanks to:
 ---
 
 
-## ✅ Conclusion
+## Conclusion
 
 **Bootstrap Showcase** isn’t just a component playground — it’s a professional, animated, and scalable UI demonstration template.  
 Whether you're learning Bootstrap or preparing a client-facing prototype, this project is your perfect start.
 
 ---
 
-## 🙏 Thank You
+## Thank You
 
 Thank you for checking out this project.  
 If you liked it, don’t forget to ⭐ [star the repo](https://github.com/gaurav-dixit35/bootstrap-showcase) on GitHub!
