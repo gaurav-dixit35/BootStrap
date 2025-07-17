@@ -18,8 +18,9 @@
 
 Explore the full project live:
 
-🔗 [**Visit Website**](https://bootstraap.netlify.app/)  
+🔗 [**Visit Website**](https://bootstraap.netlify.app/) 
 Deployed with **Netlify**.
+
 ---
 
 ## Features
